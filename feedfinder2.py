@@ -92,7 +92,7 @@ def find_feeds(url, check_all=False, user_agent=None):
             links.append(urlparse.urljoin(url, link.get("href", "")))
 
     # Check the detected links.
-    urls = filter(finder.is_feed, links)
+    urls = list(filter(finder.is_feed, links))
     logging.info("Found {0} feed <link> tags.".format(len(urls)))
     if len(urls) and not check_all:
         return sort_urls(urls)
