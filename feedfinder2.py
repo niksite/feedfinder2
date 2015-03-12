@@ -7,9 +7,12 @@ __all__ = ["find_feeds"]
 
 import logging
 import requests
-import urlparse
 from bs4 import BeautifulSoup
 
+try:
+    import urlparse
+except ImportError:
+    import urllib.parse as urlparse
 
 __version__ = "0.0.1"
 
