@@ -81,7 +81,7 @@ def find_feeds(url, check_all=False, user_agent=None):
 
     # Look for <link> tags.
     logging.info("Looking for <link> tags.")
-    tree = BeautifulSoup(text)
+    tree = BeautifulSoup(text, "lxml")
     links = []
     for link in tree.find_all("link"):
         if link.get("type") in ["application/rss+xml",

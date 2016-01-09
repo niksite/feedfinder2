@@ -8,14 +8,15 @@ if sys.argv[-1] == "publish":
 
 setup(
     name="feedfinder2",
-    version="0.0.1",
-    url="https://github.com/dfm/feedfinder2",
+    version="0.0.2",
+    url="https://github.com/niksite/feedfinder2",
     license="MIT",
     author="Dan Foreman-Mackey",
     author_email="hi@dfm.io",
     install_requires=[
         "requests",
         "beautifulsoup4",
+        "lxml"
     ],
     description="Find the feed URLs for a website.",
     long_description=open("README.rst").read(),
